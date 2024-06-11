@@ -34,9 +34,7 @@ app.use("/admin", adminRoutes);
 app.use(get404);
 
 mongoose
-  .connect(
-    "mongodb+srv://ishu:lNwKH7FlCS8wwZBx@cluster0.bbugwp2.mongodb.net/test?retryWrites=true&w=majority"
-  )
+  .connect()
   .then((result) => {
     app.listen(port, () => {
       console.log(`Server is running on port ${port}`);
